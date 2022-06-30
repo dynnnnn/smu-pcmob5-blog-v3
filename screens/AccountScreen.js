@@ -19,6 +19,7 @@ export default function AccountScreen({ navigation }) {
         headers: { Authorization: `JWT ${token}` },
       });
       console.log("Got user name!");
+      setUsername(response.data.username);
       console.log(response);
     } catch (error) {
       console.log("Error getting user name");
@@ -43,6 +44,7 @@ export default function AccountScreen({ navigation }) {
   return (
     <View style={commonStyles.container}>
       <Text>Account Screen</Text>
+      <Text>{username}</Text>
       <Button title="Sign out" onPress={signOut} />
     </View>
   );
