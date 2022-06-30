@@ -60,7 +60,7 @@ export default function CreateScreen({ navigation }) {
 
   return (
     <View style={commonStyles.container}>
-      <Text>Create a Post</Text>
+      <Text style={styles.title}>Create a Post</Text>
       
       <TextInput 
       style={styles.input}
@@ -81,6 +81,11 @@ export default function CreateScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  title:{
+    fontSize: 50,
+    marginBottom: 40,
+    fontWeight: "bold"
+  },
   input: {
     borderColor: "#999",
     borderWidth: 1,
