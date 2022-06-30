@@ -55,9 +55,14 @@ export default function AccountScreen({ navigation }) {
 
   }
 
+  function createPost(){
+    navigation.navigate("Create");
+  }
+
   return (
     <View style={commonStyles.container}>
       <Text>Account Screen</Text>
+      <Button onPress={createPost} title="Create a Post!"></Button>
       <Text>{username}</Text>
       <Button title="Sign out" onPress={signOut} />
     </View>
